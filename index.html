@@ -6,14 +6,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Give the Gift of Hope: Support Children Living with Diabetes</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f0f0f0;
         }
         .header-image {
             width: 100%;
@@ -21,16 +28,17 @@
             max-height: 200px;
             object-fit: contain;
             object-position: center;
-            background-color: transparent; /* Add a background color to fill any empty space */
+            background-color: transparent;
             border-radius: 8px;
+            margin-bottom: 20px;
         }
         .group-photo {
             width: 100%;
             max-height: 300px;
-            object-fit: cover;
             object-fit: contain;
             object-position: center;
             border-radius: 8px;
+            margin: 20px 0;
         }
         .donation-section {
             background-color: #0066cc;
@@ -47,11 +55,13 @@
         .donation-form-container h2 {
             color: #0066cc;
             text-align: center;
+            font-size: 1.5em;
+            margin-top: 0;
         }
         .iframe-container {
             position: relative;
             width: 100%;
-            padding-bottom: 150%; /* Aspect ratio for the iframe */
+            padding-bottom: 150%;
             height: 0;
             overflow: hidden;
         }
@@ -63,21 +73,13 @@
             height: 100%;
             border: 0;
         }
-
-        /* Media query for larger screens */
-        @media screen and (min-width: 768px) {
-            .iframe-container {
-                padding-bottom: 120%; /* Adjust aspect ratio for larger screens */
-            }
-        }
         .social-icons {
             text-align: center;
             margin-top: 20px;
         }
-        .social-icons img {
-            width: 30px;
-            height: 30px;
+        .social-icons a {
             margin: 0 10px;
+            text-decoration: none;
         }
         main {
             background-color: white;
@@ -85,47 +87,91 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
+        h1 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+
+        @media screen and (min-width: 768px) {
+            .iframe-container {
+                padding-bottom: 120%;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .donation-form-container h2 {
+                font-size: 1.8em;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+            main {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            .donation-form-container h2 {
+                font-size: 1.3em;
+            }
+            .donation-section {
+                padding: 15px;
+            }
+            .donation-form-container {
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <img src="./images/header.png" alt="STJDA Header" class="header-image">
-    </header>
-    
-    <main>
-        <h1>Give the Gift of Hope: Support Children Living with Diabetes</h1>
+    <div class="container">
+        <header>
+            <img src="./images/header.png" alt="STJDA Header" class="header-image">
+        </header>
         
-        <p>We're excited for you to join our cause and make a difference in the life of a child living with diabetes, and we know you're really going to make a difference. It's super easy. Just use the donation form below, and we'll process your contribution securely.</p>
-        
-        <img src="./images/groupImage.png" alt="Group photo of children" class="group-photo">
-        
-        <div class="donation-section">
-            <div class="donation-form-container">
-                <h2>Your gift will help support children living with diabetes</h2>
-                <div class="iframe-container">
-                    <iframe title='Donation form powered by Zeffy' src='https://www.zeffy.com/embed/donation-form/aa376907-a6fa-45f7-aea9-6cd369fef65c' allowpaymentrequest allowTransparency="true"></iframe>
+        <main>
+            <h1>Give the Gift of Hope: Support Children Living with Diabetes</h1>
+            
+            <p>We're excited for you to join our cause and make a difference in the life of a child living with diabetes, and we know you're really going to make a difference. It's super easy. Just use the donation form below, and we'll process your contribution securely.</p>
+            
+            <img src="./images/groupImage.png" alt="Group photo of children" class="group-photo">
+            
+            <div class="donation-section">
+                <div class="donation-form-container">
+                    <h2>Your gift will help support children living with diabetes</h2>
+                    <div class="iframe-container">
+                        <iframe title='Donation form powered by Zeffy' src='https://www.zeffy.com/embed/donation-form/aa376907-a6fa-45f7-aea9-6cd369fef65c' allowpaymentrequest allowTransparency="true"></iframe>
+                    </div>
                 </div>
             </div>
-        </div>
+            
+            <p>This year has presented unique challenges, and as we reflect on the achievements and strides we've made together, we're reminded of the resilience these children demonstrate daily. Your generosity will empower us to reach more families, develop innovative programs, and provide vital resources to navigate the complexities of diabetes management.</p>
+            
+            <p>At South Texas Juvenile Diabetes Association, we understand that managing diabetes is not just a physical challenge but an emotional and financial one as well. Your contribution, no matter the size, can make a significant difference. Together, we can ensure that every child living with diabetes has the opportunity to thrive, learn, and dream without the limitations imposed by this chronic condition.</p>
+            
+            <p>Your tax-deductible donation will directly impact the lives of these children, providing them with the support they need to lead healthy, fulfilling lives. Your generosity is deeply appreciated.</p>
+        </main>
         
-        <p>This year has presented unique challenges, and as we reflect on the achievements and strides we've made together, we're reminded of the resilience these children demonstrate daily. Your generosity will empower us to reach more families, develop innovative programs, and provide vital resources to navigate the complexities of diabetes management.</p>
-        
-        <p>At South Texas Juvenile Diabetes Association, we understand that managing diabetes is not just a physical challenge but an emotional and financial one as well. Your contribution, no matter the size, can make a significant difference. Together, we can ensure that every child living with diabetes has the opportunity to thrive, learn, and dream without the limitations imposed by this chronic condition.</p>
-        
-        <p>Your tax-deductible donation will directly impact the lives of these children, providing them with the support they need to lead healthy, fulfilling lives. Your generosity is deeply appreciated.</p>
-    </main>
-    
-    <footer>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/yourpage"><i class="fab fa-facebook-f" style="font-size: 30px; color: #3b5998;"></i></a>
-            <a href="https://twitter.com/youraccount"><i class="fab fa-twitter" style="font-size: 30px; color: #1da1f2;"></i></a>
-            <a href="https://www.instagram.com/youraccount"><i class="fab fa-instagram" style="font-size: 30px; color: #e1306c;"></i></a>
-            <a href="https://www.linkedin.com/in/yourprofile"><i class="fab fa-linkedin-in" style="font-size: 30px; color: #0077b5;"></i></a>
-        </div>
-        <p style="text-align: center;">
-            South Texas Juvenile Diabetes Association<br>
-            313 W. Nolan Ave., McALLEN, TX 78501
-        </p>
-    </footer>
+        <footer>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/stjda.org"><i class="fab fa-facebook-f" style="font-size: 30px; color: #3b5998;"></i></a>
+            </div>
+            <p>
+                South Texas Juvenile Diabetes Association<br>
+                313 W. Nolan Ave., McALLEN, TX 78501
+            </p>
+        </footer>
+    </div>
 </body>
 </html>
